@@ -1,0 +1,16 @@
+[
+  {
+    "modid": "clayium",
+    "name": "Clayium Community Edition",
+    "description": "",
+    "version": "${version}",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": [],
+    "credits": "",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+  }
+]
