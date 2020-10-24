@@ -13,6 +13,7 @@ public class ClientProxy extends CommonProxy {
     @Override
     public void registerItemRenders() {
         registerItemRender(ItemInit.CLAYPARTS);
+        registerItemRender(ItemInit.DENSECLAYPARTS);
     }
 
     public void registerItemRender(ItemBase item) {

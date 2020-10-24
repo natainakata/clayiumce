@@ -2,10 +2,9 @@ package io.github.natainakata.clayium.client.render;
 
 import io.github.natainakata.clayium.base.ItemBase;
 import io.github.natainakata.clayium.base.MetaItem;
-import io.github.natainakata.clayium.util.JsonHelper;
+import io.github.natainakata.clayium.client.JsonHelper;
 import net.minecraft.client.renderer.block.model.ModelBakery;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.MinecraftForge;

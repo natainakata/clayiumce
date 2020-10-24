@@ -1,6 +1,7 @@
-package io.github.natainakata.clayium.util;
+package io.github.natainakata.clayium.client;
 
 import io.github.natainakata.clayium.Clayium;
+import io.github.natainakata.clayium.util.LogHelper;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 

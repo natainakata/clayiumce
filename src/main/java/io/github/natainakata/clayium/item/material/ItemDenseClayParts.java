@@ -11,9 +11,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import javax.annotation.Nonnull;
 import java.util.Locale;
 
-public class ItemClayParts extends MetaItem {
-
-
+public class ItemDenseClayParts extends MetaItem {
     public static String[] names = {
             "stick",
             "shortstick",
@@ -35,7 +33,7 @@ public class ItemClayParts extends MetaItem {
 
     private static String name;
 
-    public ItemClayParts(String name) {
+    public ItemDenseClayParts(String name){
         super();
         this.name = name;
         setHasSubtypes(true);
