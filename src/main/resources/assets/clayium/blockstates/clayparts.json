@@ -1,0 +1,15 @@
+{
+  "forge_marker": 1,
+  "defaluts": {
+    "model": "clayium:item_generated",
+    "transform": "forge:default-item",
+    "uvlock": true
+  },
+  "variants": {
+    "meta0": [{
+      "textures": {
+        "layer0": "modid:items/material/parts/clayparts_stick"
+      }
+    }]
+  }
+}
