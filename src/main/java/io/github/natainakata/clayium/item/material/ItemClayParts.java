@@ -15,28 +15,31 @@ public class ItemClayParts extends MetaItem {
 
 
     public static String[] names = {
+            "plate",
             "stick",
-            "shortstick",
-            "disc",
-            "smalldisc",
+            "short_stick",
             "ring",
-            "smallring",
+            "small_ring",
             "gear",
-            "needle",
-            "pipe",
             "blade",
+            "needle",
+            "disc",
+            "small_disc",
             "cylinder",
+            "pipe",
+            "large_ball",
+            "large_plate",
+            "grinding_head",
             "bearing",
             "spindle",
-            "waterwheel",
-            "cuttinghead",
-            "grindinghead"
+            "cutting_head",
+            "water_wheel",
+            "dust"
     };
 
     private static String name;
 
     public ItemClayParts(String name) {
-        super();
         this.name = name;
         setHasSubtypes(true);
         setMaxDamage(0);
