@@ -42,17 +42,16 @@ public class Clayium {
         ItemInit.registerItems(event.getRegistry());
     }
 
-
     @SubscribeEvent
-    @SideOnly(Side.CLIENT)
     public static void registerModels(ModelRegistryEvent event) {
         PROXY.registerItemRenders();
     }
 
 
     @Mod.EventHandler
-    public void preinit(FMLPreInitializationEvent event) {
+    public void preInit(FMLPreInitializationEvent event) {
         LogHelper.load();
+        PROXY.registerEventHandlers();
     }
 
     @Mod.EventHandler

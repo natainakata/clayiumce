@@ -1,18 +1,17 @@
-package io.github.natainakata.clayium.item.material;
+package io.github.natainakata.clayium.item;
 
 import io.github.natainakata.clayium.Clayium;
-import io.github.natainakata.clayium.base.MetaItem;
+import io.github.natainakata.clayium.base.IItemMeta;
+import io.github.natainakata.clayium.base.ItemBase;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.NonNullList;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
 import javax.annotation.Nonnull;
 import java.util.Locale;
 
-public class ItemDenseClayParts extends MetaItem {
-    public static String[] names = {
+public class ItemDenseClayParts extends ItemBase implements IItemMeta {
+    private static final String[] names = {
             "plate",
             "stick",
             "short_stick",
@@ -38,21 +37,20 @@ public class ItemDenseClayParts extends MetaItem {
 
     public ItemDenseClayParts(String name){
         super();
-        this.name = name;
+        ItemDenseClayParts.name = name;
         setHasSubtypes(true);
         setMaxDamage(0);
         this.setTranslationKey(name);
         this.setRegistryName(Clayium.MOD_ID, name);
     }
-
-    @SideOnly(Side.CLIENT)
     public void getSubItems(CreativeTabs tab, NonNullList<ItemStack> items) {
         if (isInCreativeTab(tab)) {
-            for (int counter = 0; counter < names.length; counter++) {
+            for (int counter = 0; counter < getVariants(); counter++) {
                 items.add(new ItemStack(this, 1, counter));
             }
         }
     }
+
 
     public int getVariants() {
         return names.length;
@@ -60,12 +58,13 @@ public class ItemDenseClayParts extends MetaItem {
 
     @Override
     public String getTexture(int meta) {
-        return "material/parts/" + name + "_" + names[meta];
+        return "parts/" + name + "_" + names[meta];
     }
-
     @Nonnull
     @Override
-    public String getTranslationKey (ItemStack stack) {
-        return "item." + name + "_" + names[stack.getItemDamage()].toLowerCase(Locale.ROOT);
+    public String getTranslationKey(ItemStack stack) {
+        return "item." + Clayium.MOD_ID + "." + name + "." + names[stack.getItemDamage()].toLowerCase(Locale.ROOT);
+
     }
+
 }
